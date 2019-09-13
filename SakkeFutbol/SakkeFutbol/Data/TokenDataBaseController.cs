@@ -18,7 +18,6 @@ namespace SakkeFutbol.Data
             database = DependencyService.Get<ISQLite>().GetConnection();
             database.CreateTable<Token>();
         }
-
         public Token GetToken()
         {
             lock (locker)
